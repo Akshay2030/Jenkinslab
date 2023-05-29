@@ -72,6 +72,11 @@ resource "azurerm_virtual_machine" "example" {
     computer_name  = "myvm${count.index}"
     admin_username = "adminuser"
     admin_password = "Password1234!"
+    custom_data    = ""
+    ssh_key {
+      path     = "/home/adminuser/.ssh/authorized_keys"
+      key_data = "<public-ssh-key>
+      }
   }
 
   os_profile_linux_config {
