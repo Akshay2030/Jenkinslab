@@ -1,0 +1,1 @@
+ansible-playbook -i "<IP_ADDRESS_OF_VM_1>,<IP_ADDRESS_OF_VM_2>," -u <REMOTE_USERNAME> --private-key <SSH_PRIVATE_KEY_FILE> deploy.yaml
